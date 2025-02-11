@@ -22,7 +22,7 @@ A simple Ruby on Rails application to manage books and track their lending histo
    ```bash
    rails c
    Book.create(title: "Another Test eBook", author: "Simon Rabuogi", published_year: 2025, status: "available")
-**Note:** If you Enjoy the process above you can create more books. But just one will serve
+**Note:** If you Enjoy the process above you can create more books. But just one will serve </br>
 5. Start the server
    ```rails server
 
