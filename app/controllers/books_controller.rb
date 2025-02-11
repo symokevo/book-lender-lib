@@ -36,8 +36,11 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    @book.destroy
-    redirect_to books_url, notice: "The book was successfully deleted :("
+    if @book.destroy
+      redirect_to books_url, notice: "The book was successfully deleted :("
+    else
+      redirect_to books_url, alert: "The book was not deleted :("
+    end
   end
 
   def borrow

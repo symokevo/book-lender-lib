@@ -29,8 +29,10 @@
               <%= link_to edit_book_path(book), class: "btn btn-outline-warning btn-sm me-1", title: "Edit Book" do %>
                 <i class="bi bi-pencil"></i>
               <% end %>
-              <%= link_to book, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger btn-sm", title: "Delete Book" do %>
-                <i class="bi bi-trash"></i>
+              <%= form_with url: book_path(book), method: :delete, data: { confirm: "Are you sure?" }, class: "d-inline" do %>
+                <button type="submit" class="btn btn-outline-danger btn-sm" title="Delete Book">
+                  <i class="bi bi-trash"></i>
+                </button>
               <% end %>
             </td>
           </tr>
