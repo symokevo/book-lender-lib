@@ -9,7 +9,7 @@ A simple Ruby on Rails application to manage books and track their lending histo
 ## Setup 
 1. Clone the ropository: 
    ```bash
-   git clone <https://github.com/symokevo/book-lender-lib.git>
+   git clone https://github.com/symokevo/book-lender-lib.git
    cd book-lender-lib
 2. Install dependencies
    ```bash
@@ -25,7 +25,8 @@ A simple Ruby on Rails application to manage books and track their lending histo
 **Note:** If you Enjoy the process above you can create more books. But just one will serve
 5. Start the server
    ```rails server
-6. visit <http://localhost:3000>
+
+6. visit http://localhost:3000
 
 ## Note
 This is a work in progress. A lot of changes and enhancements are still necessary. Feel free to share your recommendations.
