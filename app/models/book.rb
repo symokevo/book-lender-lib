@@ -3,6 +3,6 @@ class Book < ApplicationRecord
 
   validates :title, presence: true
   validates :author, presence: true
-  validates :published_year, presence: true, numeraciality: { only_integer: true }
+  validates :published_year, presence: true
   validates :status, inclusion: { in: %w[available borrowed] }
 end

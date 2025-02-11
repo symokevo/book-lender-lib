@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :borrowings, only: [ index ]
+  resources :borrowings
 
 
   get "up" => "rails/health#show", as: :rails_health_check
