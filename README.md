@@ -23,7 +23,7 @@ A simple Ruby on Rails application to manage books and track their lending histo
    rails c
    Book.create(title: "Another Test eBook", author: "Simon Rabuogi", published_year: 2025, status: "available")
 5. Start the server
-   ```rails server
+   ```rails s
 
 6. visit http://localhost:3000
 
