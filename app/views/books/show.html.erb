@@ -23,7 +23,9 @@
           </div>
         <% end %>
       <% else %>
-        <%= link_to "Return Book", return_book_path(@book), method: :patch, class: "btn btn-secondary" %>
+        <%= form_with url: return_book_path(@book), method: :patch, local: true do %>
+          <button type="submit" class="btn btn-secondary">Return Book</button>
+        <% end %>
       <% end %>
     </div>
   </div>
