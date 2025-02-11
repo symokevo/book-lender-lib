@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   resources :books do
     member do
-      post :borrow
-      post :return
+      patch :borrow
+      patch :return
     end
   end
 

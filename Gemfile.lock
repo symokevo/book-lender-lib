@@ -83,6 +83,11 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
+    bootstrap-icons (1.0.14)
+      nokogiri (~> 1)
+    bootstrap-icons-helper (2.0.2)
+      bootstrap-icons (~> 1)
+      rails (>= 7.0)
     brakeman (7.0.0)
       racc
     builder (3.3.0)
@@ -342,6 +347,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  bootstrap-icons-helper
   brakeman
   capybara
   cssbundling-rails

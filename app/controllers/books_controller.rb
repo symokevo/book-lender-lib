@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+  before_action :set_book, only: [ :show, :edit, :update, :destroy, :borrow, :return ]
+
   def index
     @books = Book.all
   end
@@ -9,13 +11,20 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
+    @books = Book.all
   end
 
   def edit
+    @book = Book.new
+    if @book.save
+      redirect_to @book, notice: "The book was successfully updated :)"
+    else
+      render :edit
+    end
   end
 
   def create
-    @book = Book.new(book_params)
+    @book = Book.new(books_params)
     if @book.save
       redirect_to @book, notice: "The books was successfully added :)"
     else
@@ -32,14 +41,14 @@ class BooksController < ApplicationController
   end
 
   def borrow
-    if @book.update(status: "borrowed")
+    if @book.status == "available" && @book.update(status: "borrowed")
       @book.borrowings.create(
         borrower_name: params[:borrower_name],
         borrowed_at: Time.current
       )
         redirect_to @book, notice: "The book was successfully borrowed :)"
     else
-        redirect_to @book, alert: "Someone Seems to have the book :("
+        redirect_to @book, alert: "Someone seems to have the book :("
     end
   end
 

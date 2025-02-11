@@ -21,13 +21,7 @@
             <td class="fw-semibold"><%= book.title %></td>
             <td><%= book.author %></td>
             <td><%= book.published_year %></td>
-            <td>
-              <% if book.status == "Available" %>
-                <span class="badge bg-success">Available</span>
-              <% else %>
-                <span class="badge bg-secondary">Checked Out</span>
-              <% end %>
-            </td>
+            <td><%= book.status %></td>
             <td class="text-center">
               <%= link_to book, class: "btn btn-outline-info btn-sm me-1", title: "View Details" do %>
                 <i class="bi bi-eye"></i>
